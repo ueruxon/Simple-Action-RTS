@@ -142,7 +142,6 @@ public class Unit : MonoBehaviour, IUnitDamageable
     public bool TryAddResourceToInventary(ResourceTypeSO resourceType) {
         if (_inventoryResourceTypeList.Count < _maxResourceCapacity) {
             _inventoryResourceTypeList.Add(resourceType);
-            print(_inventoryResourceTypeList.Count + " сейчас в инвентаре");
             return true;
         }
 

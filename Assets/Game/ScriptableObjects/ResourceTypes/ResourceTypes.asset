@@ -15,3 +15,8 @@ MonoBehaviour:
   List:
   - {fileID: 11400000, guid: b1dd654b3ccf2f640b3d0c4e300e970a, type: 2}
   - {fileID: 11400000, guid: e75b460f43b058c4fa5ea9f5ab53693b, type: 2}
+  - {fileID: 11400000, guid: 9b1189eb8ebc0a44c9e5c1b1f8095518, type: 2}
+  ResourceHolderByType:
+    Wood: {fileID: 11400000, guid: b1dd654b3ccf2f640b3d0c4e300e970a, type: 2}
+    Stone: {fileID: 11400000, guid: e75b460f43b058c4fa5ea9f5ab53693b, type: 2}
+    Iron: {fileID: 11400000, guid: 9b1189eb8ebc0a44c9e5c1b1f8095518, type: 2}

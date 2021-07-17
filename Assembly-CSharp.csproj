@@ -68,7 +68,6 @@
     <Compile Include="Assets\Game\Scripts\Base\LookAtCamera.cs" />
     <Compile Include="Assets\Game\Scripts\Base\Mouse3D.cs" />
     <Compile Include="Assets\Game\Scripts\Building.cs" />
-    <Compile Include="Assets\Game\Scripts\GameRTSController.cs" />
     <Compile Include="Assets\Game\Scripts\IUnitDamageable.cs" />
     <Compile Include="Assets\Game\Scripts\ResourceAmount.cs" />
     <Compile Include="Assets\Game\Scripts\ResourceManager.cs" />
@@ -88,6 +87,7 @@
     <Compile Include="Assets\Game\Scripts\UnitStateMachine\RangeAttackUnitState.cs" />
     <Compile Include="Assets\Game\Scripts\UnitStateMachine\UnitState_Base.cs" />
     <Compile Include="Assets\Game\Scripts\UnitVisual.cs" />
+    <Compile Include="Assets\Game\Scripts\UnitsController.cs" />
     <Compile Include="Assets\_ChopChopAssets\Shaders\ScriptableRenderFeatures\DepthNormalsFeature.cs" />
     <Compile Include="Assets\_CodeMonkey\Assets.cs" />
     <Compile Include="Assets\_CodeMonkey\CMDebug.cs" />

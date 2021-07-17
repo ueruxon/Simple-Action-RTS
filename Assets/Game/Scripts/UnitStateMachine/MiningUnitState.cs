@@ -45,16 +45,16 @@ public class MiningUnitState : UnitState_Base
                     if (Vector3.Distance(BaseUnit.GetPosition(), _resourceNode.GetPosition()) < _reachedDistance) {
                         // Мы дошли до ноды
                         BaseUnit.StopMoving();
+                        // смотрим на ноду
+                        BaseUnit.transform.LookAt(_resourceNode.GetPosition());
                         // Начинаем добывать
                         _currentState = State.Mining;
-                        _resourceMiningTimer = _resourceMiningTimerMax;
                     }
                 }
 
                 break;
             case State.Mining:
                 if (TryToFinishCurrentMining()) break;
-
                 _resourceMiningTimer -= Time.deltaTime;
 
                 if (_resourceMiningTimer < 0f) {
@@ -122,6 +122,7 @@ public class MiningUnitState : UnitState_Base
     private bool TryToFinishCurrentMining() {
         // если ресурсная нода выработана
         if (IsResourceNodeWorkedOut()) {
+            Debug.Log("tut + " + BaseUnit.name);
             if (TryGoToStorage()) {
                 // Направляемся к хранилищу
                 return true;
@@ -170,6 +171,7 @@ public class MiningUnitState : UnitState_Base
             ResourceNode closestResourceNode = null;
             foreach (Collider collider in colliderArray) {
                 if (collider.TryGetComponent(out ResourceNode newResourceNode)) {
+                    if (!newResourceNode.HasResources()) continue;
                     // Если ресурсная нода имеет другой тип, то пропускаем ее
                     if (newResourceNode.GetResourceTypeSO() != _lastResourceNodeResourceType) continue; 
 

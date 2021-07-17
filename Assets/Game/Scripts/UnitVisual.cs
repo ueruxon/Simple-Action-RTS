@@ -37,7 +37,6 @@ public class UnitVisual : MonoBehaviour
     #endregion 
 
     public void Attack() {
-        print("atacck");
         // партиклы
         _animator.SetTrigger("Attack");
     }

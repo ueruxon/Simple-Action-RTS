@@ -23,9 +23,9 @@ public class ResourceManager : MonoBehaviour
             _resourceAmountDictionary[resourceType] = 0;
         }
 
-        //foreach (ResourceAmount resourceAmount in _startingResourceAmountList) {
-        //    AddResourceAmount(resourceAmount.ResourceTypeSO, resourceAmount.Amount);
-        //}
+        foreach (ResourceAmount resourceAmount in _startingResourceAmountList) {
+            AddResourceAmount(resourceAmount.ResourceTypeSO, resourceAmount.Amount);
+        }
     }
 
     public void AddResourceAmount(List<ResourceTypeSO> inventoryResourceTypeList) {
@@ -33,21 +33,13 @@ public class ResourceManager : MonoBehaviour
             _resourceAmountDictionary[resourceTypeSO]++;
         }
 
-        foreach (KeyValuePair<ResourceTypeSO, int> keyValue in _resourceAmountDictionary) {
-            Debug.Log(keyValue.Key + " - " + keyValue.Value);
-        }
-
-        //OnResourceAmountChanged?.Invoke();
+        OnResourceAmountChanged?.Invoke();
     }
 
     public void AddResourceAmount(ResourceTypeSO resourceTypeSO, int amount) {
         _resourceAmountDictionary[resourceTypeSO] += amount;
 
-        //OnResourceAmountChanged?.Invoke();
-
-        foreach (KeyValuePair<ResourceTypeSO, int> keyValue in _resourceAmountDictionary) {
-            Debug.Log(keyValue.Key + " - " + keyValue.Value);
-        }
+        OnResourceAmountChanged?.Invoke();
     }
 
     public int GetResourceAmount(ResourceTypeSO resourceTypeSO) {
