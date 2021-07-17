@@ -19,7 +19,7 @@ public class MiningUnitState : UnitState_Base
     private Storage _storage;
     private UnitVisual _unitVisualObject;
 
-    private float _reachedDistance = 3f;
+    private float _reachedDistance = 2.5f;
     private float _resourceMiningTimer;
 
     public override void Init() {

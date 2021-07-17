@@ -72,6 +72,7 @@
     <Compile Include="Assets\Game\Scripts\ResourceAmount.cs" />
     <Compile Include="Assets\Game\Scripts\ResourceManager.cs" />
     <Compile Include="Assets\Game\Scripts\ResourceNode.cs" />
+    <Compile Include="Assets\Game\Scripts\ResourceNodeVisualInstantiate.cs" />
     <Compile Include="Assets\Game\Scripts\ScriptableObjects\ResourceTypeListSO.cs" />
     <Compile Include="Assets\Game\Scripts\ScriptableObjects\ResourceTypeSO.cs" />
     <Compile Include="Assets\Game\Scripts\Storage.cs" />
@@ -88,6 +89,7 @@
     <Compile Include="Assets\Game\Scripts\UnitStateMachine\UnitState_Base.cs" />
     <Compile Include="Assets\Game\Scripts\UnitVisual.cs" />
     <Compile Include="Assets\Game\Scripts\UnitsController.cs" />
+    <Compile Include="Assets\Game\Scripts\UnitsSelectionManager.cs" />
     <Compile Include="Assets\_ChopChopAssets\Shaders\ScriptableRenderFeatures\DepthNormalsFeature.cs" />
     <Compile Include="Assets\_CodeMonkey\Assets.cs" />
     <Compile Include="Assets\_CodeMonkey\CMDebug.cs" />
