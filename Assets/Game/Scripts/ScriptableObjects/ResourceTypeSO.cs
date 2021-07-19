@@ -3,7 +3,8 @@
 [CreateAssetMenu(fileName = "ResourceType", menuName = "Resources/ResourceType")]
 public class ResourceTypeSO : ScriptableObject
 {
-    public Sprite sprite;
-    public string type;
-    public Color color;
+    public Sprite Sprite;
+    public string Type;
+    public Color Color;
+    public string ColorHex;
 }

@@ -67,15 +67,24 @@
     <Compile Include="Assets\Game\Scripts\Base\HealthSystem.cs" />
     <Compile Include="Assets\Game\Scripts\Base\LookAtCamera.cs" />
     <Compile Include="Assets\Game\Scripts\Base\Mouse3D.cs" />
-    <Compile Include="Assets\Game\Scripts\Building.cs" />
+    <Compile Include="Assets\Game\Scripts\Base\TooltipCanvas.cs" />
+    <Compile Include="Assets\Game\Scripts\Buildings\Barracks.cs" />
+    <Compile Include="Assets\Game\Scripts\Buildings\Building.cs" />
+    <Compile Include="Assets\Game\Scripts\Buildings\BuildingConstruction.cs" />
+    <Compile Include="Assets\Game\Scripts\Buildings\BuildingPlacement.cs" />
+    <Compile Include="Assets\Game\Scripts\Buildings\BuildingPlacementGhost.cs" />
+    <Compile Include="Assets\Game\Scripts\Buildings\BuildingSelectionManager.cs" />
+    <Compile Include="Assets\Game\Scripts\Buildings\Storage.cs" />
     <Compile Include="Assets\Game\Scripts\IUnitDamageable.cs" />
     <Compile Include="Assets\Game\Scripts\ResourceAmount.cs" />
     <Compile Include="Assets\Game\Scripts\ResourceManager.cs" />
     <Compile Include="Assets\Game\Scripts\ResourceNode.cs" />
     <Compile Include="Assets\Game\Scripts\ResourceNodeVisualInstantiate.cs" />
+    <Compile Include="Assets\Game\Scripts\ScriptableObjects\BuildingTypeListSO.cs" />
+    <Compile Include="Assets\Game\Scripts\ScriptableObjects\BuildingTypeSO.cs" />
     <Compile Include="Assets\Game\Scripts\ScriptableObjects\ResourceTypeListSO.cs" />
     <Compile Include="Assets\Game\Scripts\ScriptableObjects\ResourceTypeSO.cs" />
-    <Compile Include="Assets\Game\Scripts\Storage.cs" />
+    <Compile Include="Assets\Game\Scripts\UI\BuildingSelectionUI.cs" />
     <Compile Include="Assets\Game\Scripts\UI\ResourceManagerUI.cs" />
     <Compile Include="Assets\Game\Scripts\Unit.cs" />
     <Compile Include="Assets\Game\Scripts\UnitOld.cs" />
@@ -715,6 +724,9 @@
     </Reference>
     <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
       <HintPath>F:/PORTFOLIO/Action RTS/Library/ScriptAssemblies/Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.Sprite.Editor">
+      <HintPath>F:/PORTFOLIO/Action RTS/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
     </Reference>
     <Reference Include="com.unity.cinemachine.editor">
       <HintPath>F:/PORTFOLIO/Action RTS/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
