@@ -10,7 +10,7 @@ public class Unit : MonoBehaviour, IUnitDamageable
     public event UnityAction OnSelectedChanged;
     public event UnityAction<bool> OnStartedMoving;
     public event UnityAction OnStoppedMoving;
-    public event UnityAction OnDead;
+    public event UnityAction<Unit> OnDead;
 
     [Header("Настройки юнита")]
     [Space(1)]
@@ -27,6 +27,7 @@ public class Unit : MonoBehaviour, IUnitDamageable
     [Space(1)]
     [SerializeField] private UnitState_Base _normalUnitState;
     [SerializeField] private UnitState_Base _miningUnitState;
+    [SerializeField] private UnitState_Base _constructionUnitState;
     [SerializeField] private UnitState_Base _patrolUnitState;
     [SerializeField] private UnitState_Base _attackUnitState;
 
@@ -133,7 +134,11 @@ public class Unit : MonoBehaviour, IUnitDamageable
 
     #region Майнинг
     public void SetMiningResource(ResourceNode node) {
-        SetState(_miningUnitState);
+        if (_miningUnitState == null) {
+            SetStateByDefualt();
+        } else {
+            SetState(_miningUnitState);
+        }
         
         MiningUnitState miningUnitState = (MiningUnitState)CurrentState;
         miningUnitState.SetResourceNode(node);
@@ -159,7 +164,11 @@ public class Unit : MonoBehaviour, IUnitDamageable
 
     #region Атака
     public void SetTarget(IUnitDamageable targetUnit) {
-        SetState(_attackUnitState);
+        if (_attackUnitState == null) {
+            SetStateByDefualt();
+        } else {
+            SetState(_attackUnitState);
+        }
 
         AttackUnitState attackUnitState = (AttackUnitState)CurrentState;
         attackUnitState.SetEnemyTarget(targetUnit);
@@ -167,10 +176,20 @@ public class Unit : MonoBehaviour, IUnitDamageable
     }
     #endregion
 
+    #region Строительство
+    public void SetConstructionBuilding(BuildingConstruction buildingConstruction) {
+        SetState(_constructionUnitState);
+
+        ConstructionUnitState constructionUnitState = (ConstructionUnitState)CurrentState;
+        constructionUnitState.SetBuildingConstruction(buildingConstruction);
+    }
+
+    #endregion
+
     #region Ивенты и события
     private void HealthSystem_OnDead() {
 
-       // OnDead?.Invoke(this, EventArgs.Empty);
+        OnDead?.Invoke(this);
         Destroy(gameObject);
     }
 

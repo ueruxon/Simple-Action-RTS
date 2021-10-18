@@ -12,6 +12,8 @@ public class CameraTarget : MonoBehaviour
     [SerializeField] private Axis _axis = Axis.XZ;
     [SerializeField] private float _moveSpeed = 30f;
 
+    private float _cameraY;
+
     private void Update() {
         float moveX = Input.GetAxisRaw("Horizontal");
         float moveY = Input.GetAxisRaw("Vertical");
@@ -29,5 +31,11 @@ public class CameraTarget : MonoBehaviour
         }
 
         transform.position += moveDir * _moveSpeed * Time.deltaTime;
+
+
+        float zoomSpeed = 1f;
+        _cameraY += -Input.mouseScrollDelta.y * zoomSpeed;
+        _cameraY = Mathf.Clamp(_cameraY, -3f, 17);
+        transform.position = new Vector3(transform.position.x, _cameraY, transform.position.z);
     }
 }

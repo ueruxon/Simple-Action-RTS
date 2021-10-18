@@ -24,7 +24,12 @@ public class UnitsController : MonoBehaviour
                 if (raycastHit.collider.TryGetComponent(out ResourceNode resourceNode)) {
                     unitAction = (Unit unit) => unit.SetMiningResource(resourceNode);
                 }
-
+                // Строительство
+                if (raycastHit.collider.TryGetComponent(out BuildingConstruction buildingConstruction)) {
+                    if (!buildingConstruction.IsConstructed()) {
+                        unitAction = (Unit unit) => unit.SetConstructionBuilding(buildingConstruction);
+                    }
+                }
                 // Атаковать
                 if (raycastHit.collider.TryGetComponent(out Unit targetUnit)) {
                     if (targetUnit.IsEnemy()) {

@@ -11,12 +11,16 @@ public class Storage : MonoBehaviour
 
         Storage closest = null;
         foreach (Storage storage in instanceList) {
-            if (closest == null) {
-                closest = storage;
-            }
-            else {
-                if (Vector3.Distance(position, storage.GetPosition()) < Vector3.Distance(position, closest.GetPosition())) {
+            bool isBuilt = storage.GetComponent<BuildingConstruction>().IsBuilt;
+
+            if (isBuilt) {
+                if (closest == null) {
                     closest = storage;
+                }
+                else {
+                    if (Vector3.Distance(position, storage.GetPosition()) < Vector3.Distance(position, closest.GetPosition())) {
+                        closest = storage;
+                    }
                 }
             }
         }

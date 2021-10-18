@@ -75,6 +75,9 @@
     <Compile Include="Assets\Game\Scripts\Buildings\BuildingPlacementGhost.cs" />
     <Compile Include="Assets\Game\Scripts\Buildings\BuildingSelectionManager.cs" />
     <Compile Include="Assets\Game\Scripts\Buildings\Storage.cs" />
+    <Compile Include="Assets\Game\Scripts\CameraSystem.cs" />
+    <Compile Include="Assets\Game\Scripts\EnemySpawner.cs" />
+    <Compile Include="Assets\Game\Scripts\GameManager.cs" />
     <Compile Include="Assets\Game\Scripts\IUnitDamageable.cs" />
     <Compile Include="Assets\Game\Scripts\ResourceAmount.cs" />
     <Compile Include="Assets\Game\Scripts\ResourceManager.cs" />
@@ -84,7 +87,10 @@
     <Compile Include="Assets\Game\Scripts\ScriptableObjects\BuildingTypeSO.cs" />
     <Compile Include="Assets\Game\Scripts\ScriptableObjects\ResourceTypeListSO.cs" />
     <Compile Include="Assets\Game\Scripts\ScriptableObjects\ResourceTypeSO.cs" />
+    <Compile Include="Assets\Game\Scripts\ScriptableObjects\UnitTypeSO.cs" />
+    <Compile Include="Assets\Game\Scripts\UI\BarracksUI.cs" />
     <Compile Include="Assets\Game\Scripts\UI\BuildingSelectionUI.cs" />
+    <Compile Include="Assets\Game\Scripts\UI\GoalUI.cs" />
     <Compile Include="Assets\Game\Scripts\UI\ResourceManagerUI.cs" />
     <Compile Include="Assets\Game\Scripts\Unit.cs" />
     <Compile Include="Assets\Game\Scripts\UnitOld.cs" />

@@ -122,7 +122,6 @@ public class MiningUnitState : UnitState_Base
     private bool TryToFinishCurrentMining() {
         // если ресурсная нода выработана
         if (IsResourceNodeWorkedOut()) {
-            Debug.Log("tut + " + BaseUnit.name);
             if (TryGoToStorage()) {
                 // Направляемся к хранилищу
                 return true;

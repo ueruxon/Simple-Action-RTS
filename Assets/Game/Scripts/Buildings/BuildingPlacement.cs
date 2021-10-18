@@ -21,7 +21,7 @@ public class BuildingPlacement : MonoBehaviour
                 Vector3 buildPosition = Mouse3D.GetMouseWorldPosition();
                 if (ResourceManager.Instance.TrySpendResource(_currentBuildingTypeSO.ConstructionResourceAmountCostList)) {
                     // Тратим ресурсы и строим
-                    BuildingConstruction.Create(GetBuildingTemplate(_currentBuildingTypeSO), buildPosition, _currentBuildingTypeSO);
+                    BuildingConstruction.Create(buildPosition, _currentBuildingTypeSO);
                 }
                 else {
                     TooltipCanvas.ShowTooltip_Static("Не хватает средств на постройку!\n" +
@@ -46,11 +46,4 @@ public class BuildingPlacement : MonoBehaviour
     public BuildingTypeSO GetBuildingTypeSO() {
         return _currentBuildingTypeSO;
     }
-
-    private GameObject GetBuildingTemplate(BuildingTypeSO buildingTypeSO) {
-        GameObject buildingTemplate = buildingTypeSO.Template.gameObject;
-
-        return buildingTemplate;
-    }
-
 }

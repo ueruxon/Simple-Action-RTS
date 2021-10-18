@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2396563520637485348}
   - component: {fileID: 6343662619128747172}
   - component: {fileID: 8691807411667808547}
-  - component: {fileID: 1715551549337316946}
+  - component: {fileID: 12600788665131831}
   m_Layer: 0
   m_Name: pfStorage
   m_TagString: Untagged
@@ -76,7 +76,7 @@ MonoBehaviour:
   _isEnemy: 0
   _attackDistanceOffset: 1
   _healthBarOffsetY: 3.5
---- !u!114 &1715551549337316946
+--- !u!114 &12600788665131831
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -88,6 +88,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7969f0fb882c3304799974b667a388cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IsBuilt: 0
 --- !u!1001 &6960814201948669041
 PrefabInstance:
   m_ObjectHideFlags: 0

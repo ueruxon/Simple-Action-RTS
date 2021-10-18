@@ -16,8 +16,10 @@ MonoBehaviour:
   Template: {fileID: 4534823503197629101, guid: eff55196e30f5d949a30941c3dcbd589,
     type: 3}
   Visual: {fileID: 3247463296785404723, guid: 2ff82c10e9eb13f4c88aad16c485b8ac, type: 3}
+  VisualConstruction: {fileID: 3247463296785404723, guid: cd100dff2ed909543b2bff8dcf7b36b0,
+    type: 3}
   Sprite: {fileID: 21300000, guid: 970b2fd945f4f5c4c9acf5400558b48a, type: 3}
-  ConstructionProgressMax: 5
+  ConstructionProgressMax: 10
   ConstructionDistanceOffset: 1
   ConstructionResourceAmountCostList:
   - ResourceTypeSO: {fileID: 11400000, guid: b1dd654b3ccf2f640b3d0c4e300e970a, type: 2}
